@@ -25,9 +25,9 @@ class App extends React.Component {
     const country = e.target.elements.country.value;
     const apiCall = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`);
     const data = await apiCall.json();
-    const responseHttpOk = 200;
+    const HttpResponseOk = 200;
 
-    if (city && country && data.cod === responseHttpOk) {
+    if (city && country && data.cod === HttpResponseOk) {
       this.setState({
         temperature: data.main.temp,
         city: data.name,
