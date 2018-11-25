@@ -2,6 +2,10 @@ import React from 'react';
 
 class Weather extends React.Component {
 
+    convertKelvinToCelsius = (temperatureKelvin) => {
+        return temperatureKelvin - 273.15;
+    }
+
     render() {
         return (
             <div className="weather__info">
@@ -12,7 +16,7 @@ class Weather extends React.Component {
                 }
                 {
                     this.props.temperature && <p className="weather__key">Temperature:
-                        <span className="weather__value"> {this.props.temperature}</span>
+                        <span className="weather__value"> {this.convertKelvinToCelsius(this.props.temperature)} °C</span>
                     </p>
                 }
                 {
