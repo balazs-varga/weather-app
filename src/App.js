@@ -15,7 +15,7 @@ class App extends React.Component {
     return (
       <div>
         <Titles />
-        <Form />
+        <Form getWeather={this.getWeather}/>
         <Weather />
       </div>
     );
