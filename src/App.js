@@ -29,7 +29,7 @@ class App extends React.Component {
         humidity: data.main.humidity,
         description: data.weather[0].description,
         error: ""
-      })
+      });
     } else {
       this.setState({
         temperature: undefined,
@@ -38,8 +38,9 @@ class App extends React.Component {
         humidity: undefined,
         description: undefined,
         error: "Please enter the value."
-    })
+    });
   }
+}
 
   render() {
     return (
