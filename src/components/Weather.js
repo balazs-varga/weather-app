@@ -3,7 +3,7 @@ import React from 'react';
 class Weather extends React.Component {
 
     convertKelvinToCelsius = (temperatureKelvin) => {
-        return temperatureKelvin - 273.15;
+        return (temperatureKelvin - 273.15).toFixed(0);
     }
 
     render() {
